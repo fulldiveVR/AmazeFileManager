@@ -21,7 +21,7 @@
 
 <resources xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="MissingTranslation">
-    <string name="app_name">Amaze File Manager</string>
+    <string name="app_name">CryptoFile</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="icon">icon</string>
@@ -158,7 +158,7 @@
     <string name="miscellaneous">Miscellaneous</string>
     <string name="root_pref_summary">Show Permissions of Files and Folders</string>
     <string name="root_pref">Show Permissions</string>
-    <string name="about_amaze_file_manager_label">About Amaze File Manager</string>
+    <string name="about_amaze_file_manager_label">About CryptoFile</string>
     <string name="version">Version</string>
     <string name="rate">Rate the app</string>
     <string name="feedback">Send Feedback</string>
@@ -302,7 +302,7 @@
     <string name="invalid">Invalid %s</string>
     <string name="ftp_notif_starting">FTP Server is starting</string>
     <string name="ftp_notif_starting_title">FTP Server</string>
-    <string name="ftp_notif_title">Amaze FTP Server running</string>
+    <string name="ftp_notif_title">CryptoFile FTP Server running</string>
     <string name="ftp_notif_text">at %s</string>
     <string name="ftp_notif_stop_server">STOP</string>
     <string name="ftp_port_edit_menu_title">FTP port</string>
@@ -314,7 +314,7 @@
     <string name="report_bugs_title">Report Bugs</string>
     <string name="report_bugs_summary">Report bugs or request new feature</string>
     <string name="translate_title">Translate</string>
-    <string name="translate_summary">Translate Amaze in your language</string>
+    <string name="translate_summary">Translate CryptoFile in your language</string>
     <string name="easter_egg_title">Studio Mode</string>
     <string name="paypal_copy_message">PayPal ID copied to clipboard</string>
     <string name="searching_devices">Searching for devices</string>
@@ -530,9 +530,9 @@
     <string name="directory">Directory</string>
     <string name="question_delete_shortcut">Delete shortcut?</string>
 
-    <string name="cloud_error_plugin">Amaze Cloud plugin not found. Please download from Play Store.</string>
+    <string name="cloud_error_plugin">CryptoFile Cloud plugin not found. Please download from Play Store.</string>
     <string name="cloud_error_failed_restart">Failed to load the connection.
-        Please open Amaze Cloud once.</string>
+        Please open CryptoFile Cloud once.</string>
     <string name="cloud_remove">Do you want to remove the cloud connection?</string>
     <string name="cloud_fail_authenticate">Failed to authenticate</string>
     <string name="cloud_share_copied">Sharable link copied to clipboard</string>
@@ -570,12 +570,12 @@
     <string name="github" translatable="false">GitHub</string>
     <string name="developers">Developers</string>
     <string name="no_bitcoin_app">Please install a Bitcoin Wallet app</string>
-    <string name="channel_name_normal">Amaze Notifications</string>
-    <string name="channel_description_normal">Amaze File Manager\'s Notifications</string>
-    <string name="channel_name_ftp">Amaze FTP Server</string>
-    <string name="channel_description_ftp">Amaze File Manager FTP Server\'s Notifications</string>
+    <string name="channel_name_normal">CryptoFile Notifications</string>
+    <string name="channel_description_normal">CryptoFile\'s Notifications</string>
+    <string name="channel_name_ftp">CryptoFile FTP Server</string>
+    <string name="channel_description_ftp">CryptoFile FTP Server\'s Notifications</string>
 
-    <string name="appbar_name" translatable="false">Amaze</string>
+    <string name="appbar_name" translatable="false">CryptoFile</string>
     <string name="processing">Processing&#8230;</string>
     <string name="failed_no_connection">Failed to load files. Please check your connection.</string>
 
@@ -593,7 +593,7 @@
     <string name="ssh_connect_failed_host_key_changed_title">WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</string>
     <string name="ssh_connect_failed_host_key_changed_message">
         IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\n\n
-        Someone could be eavesdropping on you right now (man-in-the-middle attack)! It is also possible that the host key has just been changed. The fingerprint for the public key sent by the remote host does not match the one stored in Amaze.\n\n
+        Someone could be eavesdropping on you right now (man-in-the-middle attack)! It is also possible that the host key has just been changed. The fingerprint for the public key sent by the remote host does not match the one stored in CryptoFile.\n\n
         Please contact your system administrator or setup a new connection to continue connecting to the server.
     </string>
     <string name="ssh_key_prompt_passphrase">Please enter key passphrase.</string>

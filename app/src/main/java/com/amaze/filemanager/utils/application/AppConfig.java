@@ -42,6 +42,7 @@ import com.amaze.filemanager.utils.provider.UtilitiesProvider;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
+import com.fulldive.eventsender.lib.EventSender;
 
 import java.lang.ref.WeakReference;
 
@@ -84,6 +85,8 @@ public class AppConfig extends GlideApplication {
         // disabling file exposure method check for api n+
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
+
+        EventSender.getInstance(this);  // initialize
     }
 
     @Override

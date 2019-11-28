@@ -49,6 +49,8 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+
+import com.fulldive.eventsender.lib.EventSender;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.fragment.app.Fragment;
@@ -1939,4 +1941,17 @@ public class MainActivity extends PermissionsActivity implements SmbConnectionLi
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        EventSender.getInstance(getApplicationContext()).onStart(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        EventSender.getInstance(getApplicationContext()).onStop(this);
+    }
+
 }
