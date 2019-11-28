@@ -1,5 +1,10 @@
 apply plugin: 'com.android.application'
 
+// Load keystore properties
+def keystorePropertiesFile = file("../../keys/keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
 android {
     compileSdkVersion 29
 
@@ -32,8 +37,12 @@ android {
     }
 
     signingConfigs {
-        release
-        config
+        releaseConfig {
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+        }
     }
 
     buildTypes {
@@ -45,10 +54,9 @@ android {
         }
 
         release {
-            signingConfig signingConfigs.release
-
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
+            signingConfig signingConfigs.releaseConfig
         }
     }
 
@@ -67,7 +75,6 @@ android {
         play {
             dimension 'static'
             buildConfigField "boolean", "IS_VERSION_FDROID", "false"
-            signingConfig signingConfigs.config
         }
     }
 
@@ -93,10 +100,10 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
 
-    implementation 'androidx.vectordrawable:vectordrawable-animated:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable-animated:1.1.0'
     implementation 'androidx.legacy:legacy-support-v13:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.palette:palette:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.android.billingclient:billing:1.2'
