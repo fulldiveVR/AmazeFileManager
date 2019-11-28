@@ -17,7 +17,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <string name="app_name">Amaze</string>
+    <string name="app_name">CryptoFile</string>
     <string name="drawer_open">Відкрити меню навігації</string>
     <string name="drawer_close">Закрити меню навігації</string>
     <string name="icon">іконка</string>
@@ -144,7 +144,7 @@
     <string name="miscellaneous">Інше</string>
     <string name="root_pref_summary">Відображати дозволи для файлів і тек</string>
     <string name="root_pref">Відображати дозволи</string>
-    <string name="about_amaze_file_manager_label">Про Amaze File Manager</string>
+    <string name="about_amaze_file_manager_label">Про CryptoFile</string>
     <string name="version">Версія</string>
     <string name="rate">Оцініть додаток</string>
     <string name="feedback">Відправити відгук</string>
@@ -283,7 +283,7 @@
     <string name="domain">Домен</string>
     <string name="invalid">Неприпустимий %s</string>
     <string name="ftp_notif_starting">FTP Server запускається</string>
-    <string name="ftp_notif_title">Amaze FTP Сервер працює</string>
+    <string name="ftp_notif_title">CryptoFile FTP Сервер працює</string>
     <string name="ftp_notif_text">на %s</string>
     <string name="ftp_notif_stop_server">ЗУПИНИТИ</string>
     <string name="ftp_port_edit_menu_title">Вибрати порт FTP</string>
@@ -295,7 +295,7 @@
     <string name="report_bugs_title">Звіт про помилку</string>
     <string name="report_bugs_summary">Повідомляти про помилки або запитати нову функцію</string>
     <string name="translate_title">Перекласти</string>
-    <string name="translate_summary">Перекласти Amaze вашою мовою</string>
+    <string name="translate_summary">Перекласти CryptoFile вашою мовою</string>
   <string name="easter_egg_title">Режим Студії</string>
     <string name="paypal_copy_message">PayPal id скопійовано до буфера обміну</string>
     <string name="searching_devices">Пошук пристроїв</string>
@@ -488,7 +488,7 @@
     <string name="crypt_fingerprint_authenticate">Торкніться сенсору для продовження</string>
     <string name="authenticate_password">Введіть пароль</string>
     <string name="cloud_error_plugin">Плагін для цієї хмари не знайдено. Будь ласка, завантажити з Play Store.</string>
-    <string name="cloud_error_failed_restart">Помилка завантаження. Будь ласка, выдкрийте Amaze Cloud. </string>
+    <string name="cloud_error_failed_restart">Помилка завантаження. Будь ласка, выдкрийте CryptoFile Cloud. </string>
     <string name="cloud_remove">Ви хочете видалити підключення до хмари?</string>
     <string name="cloud_fail_authenticate">Не вдалося здійснити автентифікацію</string>
     <string name="cloud_share_copied">Це посилання зкопійовано до буфера обміну</string>

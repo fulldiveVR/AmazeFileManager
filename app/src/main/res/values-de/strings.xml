@@ -19,7 +19,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-  <string name="app_name">Amaze File Manager</string>
+  <string name="app_name">CryptoFile</string>
   <string name="drawer_open">Öffne Navigationsleiste</string>
   <string name="drawer_close">Schließe Navigationsleiste</string>
     <string name="icon">Symbol</string>
@@ -149,7 +149,7 @@
   <string name="miscellaneous">Verschiedenes</string>
   <string name="root_pref_summary">Zeige die Berechtigungen der Dateien und Ordner an</string>
   <string name="root_pref">Dateiberechtigungen anzeigen</string>
-  <string name="about_amaze_file_manager_label">Über Amaze File Manager</string>
+  <string name="about_amaze_file_manager_label">Über CryptoFile</string>
   <string name="version">Version</string>
   <string name="rate">Diese App bewerten</string>
   <string name="feedback">Feedback senden</string>
@@ -289,7 +289,7 @@ andernfalls wird nach Treffern gesucht.</string>
   <string name="domain">Domain</string>
   <string name="invalid">Ungültig %s</string>
   <string name="ftp_notif_starting">FTP Server startet</string>
-  <string name="ftp_notif_title">Amaze FTP Server startet</string>
+  <string name="ftp_notif_title">CryptoFile FTP Server startet</string>
   <string name="ftp_notif_text">bei %s</string>
   <string name="ftp_notif_stop_server">STOPP</string>
   <string name="ftp_port_edit_menu_title">FTP-Port wählen</string>
@@ -301,7 +301,7 @@ andernfalls wird nach Treffern gesucht.</string>
   <string name="report_bugs_title">Melde Fehler</string>
   <string name="report_bugs_summary">Melde Fehler oder schlage neue Funktionen vor</string>
   <string name="translate_title">Übersetzen</string>
-  <string name="translate_summary">Übersetze Amaze in deine Sprache</string>
+  <string name="translate_summary">Übersetze CryptoFile in deine Sprache</string>
   <string name="easter_egg_title">Studio-Modus</string>
   <string name="paypal_copy_message">PayPal ID in die Zwischenablage kopiert</string>
   <string name="searching_devices">Suche nach Geräten</string>
@@ -458,9 +458,9 @@ andernfalls wird nach Treffern gesucht.</string>
   <string name="edit_shortcut">Verknüpfung bearbeiten</string>
   <string name="directory">Verzeichnis</string>
   <string name="question_delete_shortcut">Verknüpfung löschen?</string>
-    <string name="cloud_error_plugin">Amaze Cloud Plugin konnte nicht gefunden werden. Bitte laden Sie es aus dem Play Store herunter.</string>
+    <string name="cloud_error_plugin">CryptoFile Cloud Plugin konnte nicht gefunden werden. Bitte laden Sie es aus dem Play Store herunter.</string>
   <string name="cloud_error_failed_restart">Fehler beim Laden der Verbindung.
-         Bitte öffnen Sie Amaze Cloud einmal.</string>
+         Bitte öffnen Sie CryptoFile Cloud einmal.</string>
   <string name="cloud_remove">Möchten Sie die Cloud-Verbindung entfernen?</string>
   <string name="cloud_fail_authenticate">Authentifizierung fehlgeschlagen</string>
   <string name="cloud_share_copied">Teilbarer Link wurde in die Zwischenablage kopiert</string>

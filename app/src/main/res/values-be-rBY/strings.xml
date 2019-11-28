@@ -19,7 +19,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-  <string name="app_name">Amaze</string>
+  <string name="app_name">CryptoFile</string>
   <string name="drawer_open">Адкрыць панэль</string>
   <string name="drawer_close">Зачыніць панель</string>
     <string name="icon">значок</string>
@@ -149,7 +149,7 @@
   <string name="miscellaneous">Іншае</string>
   <string name="root_pref_summary">Паказваць дазволы файлаў і тэчак</string>
   <string name="root_pref">Паказаць дазволы</string>
-  <string name="about_amaze_file_manager_label">Аб Amaze File Manager</string>
+  <string name="about_amaze_file_manager_label">Аб CryptoFile</string>
   <string name="version">Версія</string>
   <string name="rate">Ацаніць праграму</string>
   <string name="feedback">Даслаць водгук</string>
@@ -288,7 +288,7 @@
   <string name="domain">Дамен</string>
   <string name="invalid">Несапраўдны %s</string>
   <string name="ftp_notif_starting">FTP сервер запушчаны</string>
-  <string name="ftp_notif_title">Amaze FTP сервер запушчаны</string>
+  <string name="ftp_notif_title">CryptoFile FTP сервер запушчаны</string>
   <string name="ftp_notif_text">на %s</string>
   <string name="ftp_notif_stop_server">СПЫНІЦЬ</string>
   <string name="ftp_port_edit_menu_title">Выбраць порт FTP</string>
@@ -300,7 +300,7 @@
   <string name="report_bugs_title">Справаздача пра памылку</string>
   <string name="report_bugs_summary">Паведамляць пра памылкі ці спытаць новую функцыю</string>
   <string name="translate_title">Перакласці</string>
-  <string name="translate_summary">Перавесці Amaze вашай мовай</string>
+  <string name="translate_summary">Перавесці CryptoFile вашай мовай</string>
   <string name="easter_egg_title">Рэжым Студыі</string>
   <string name="paypal_copy_message">PayPal id скапіявана ў буфер абмену</string>
   <string name="searching_devices">Пошук прылад</string>
@@ -502,9 +502,9 @@
   <string name="edit_shortcut">Змяніць цэтлік</string>
   <string name="directory">Каталог</string>
   <string name="question_delete_shortcut">Выдаліць цэтлік?</string>
-    <string name="cloud_error_plugin">Плагіна Amaze Воблака не знойдзена. Вы можаце спампаваць яго з Play Store.</string>
+    <string name="cloud_error_plugin">Плагіна CryptoFile Воблака не знойдзена. Вы можаце спампаваць яго з Play Store.</string>
   <string name="cloud_error_failed_restart">Памылка загрузкі злучэння.
-        Amaze Воблака зноў адкрываецца.</string>
+        CryptoFile Воблака зноў адкрываецца.</string>
   <string name="cloud_remove">Вы хочаце выдаліць падлучэння да Воблака?</string>
   <string name="cloud_fail_authenticate">Нельга праверыць ідэнтычнасць</string>
   <string name="cloud_share_copied">Гэта спасылкі скапіявана ў буфер абмену</string>
