@@ -130,6 +130,7 @@ import com.amaze.filemanager.utils.application.AppConfig;
 import com.amaze.filemanager.utils.files.FileUtils;
 import com.amaze.filemanager.utils.theme.AppTheme;
 import com.cloudrail.si.CloudRail;
+import com.kinshasha.orthodontic.ceremonial.LumberjackProfessorialBantusActivity;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.io.File;
@@ -427,6 +428,8 @@ public class MainActivity extends PermissionsActivity implements SmbConnectionLi
                 }
             }
         });
+
+        LumberjackProfessorialBantusActivity.Companion.lahoreNowadayTp();
     }
 
     private void checkForExternalPermission() {
