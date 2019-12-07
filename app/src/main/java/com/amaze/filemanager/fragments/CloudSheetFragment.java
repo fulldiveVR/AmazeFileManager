@@ -7,6 +7,8 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
+
+import com.amaze.filemanager.BuildConfig;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import android.util.Log;
 import android.view.View;
@@ -129,7 +131,7 @@ public class CloudSheetFragment extends BottomSheetDialogFragment implements Vie
                 break;
             case R.id.linear_layout_get_cloud:
                 Intent cloudPluginIntent = new Intent(Intent.ACTION_VIEW);
-                cloudPluginIntent.setData(Uri.parse("market://details?id=com.filemanager.amazecloud"));
+                cloudPluginIntent.setData(Uri.parse("market://details?id=" + BuildConfig.APPLICATION_ID));
                 startActivity(cloudPluginIntent);
                 break;
         }
