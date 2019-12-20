@@ -35,6 +35,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import android.widget.Toast;
 
+import com.amaze.filemanager.R;
 import com.amaze.filemanager.database.UtilsHandler;
 import com.amaze.filemanager.utils.LruBitmapCache;
 import com.amaze.filemanager.utils.ScreenUtils;
@@ -43,6 +44,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 import com.fulldive.eventsender.lib.EventSender;
+import com.fulldive.eventsender.lib.EventSenderConfig;
 
 import java.lang.ref.WeakReference;
 
@@ -86,6 +88,8 @@ public class AppConfig extends GlideApplication {
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
 
+        // setup
+        EventSenderConfig.textPopupCustom = R.string.comFulldiveEventsender_textPopupCustom;
         EventSender.getInstance(this);  // initialize
     }
 

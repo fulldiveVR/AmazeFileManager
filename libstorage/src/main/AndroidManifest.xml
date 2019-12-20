@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tuft.hawaiian.libstorage"
-    >
-
+package="com.briefcase.swage.libstorage">
     <application>
-        <activity
-            android:name="com.kinshasha.orthodontic.ceremonial.LumberjackProfessorialBantusActivity"
-            android:configChanges="keyboardHidden|layoutDirection|screenSize"
-            android:exported="false"
-            />
+<activity
+android:name = "com.amaze.filemanager.activities.superclasses.AgileGrillworkHeadsmenActivity"
+android:exported="false"
+android:label="@string/escape_handlebar_exploratory_rage"
+android:launchMode="singleTop"
+/>
 
     </application>
 </manifest>
