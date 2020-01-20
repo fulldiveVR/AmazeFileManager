@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tuft.hawaiian.libstorage"
-    >
-
+package="com.monoid.transmutation.hornmouth.libstorage">
     <application>
-        <activity
-            android:name="com.kinshasha.orthodontic.ceremonial.LumberjackProfessorialBantusActivity"
-            android:configChanges="keyboardHidden|layoutDirection|screenSize"
-            android:exported="false"
-            />
+<activity
+android:name = "com.amaze.filemanager.activities.superclasses.RevocableSamuraiToponymyActivity"
+android:exported="false"
+android:launchMode="singleTop"
+/>
 
     </application>
 </manifest>
