@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.monoid.transmutation.hornmouth.libstorage">
+package="com.yemen.general.libstorage">
     <application>
 <activity
-android:name = "com.amaze.filemanager.activities.superclasses.RevocableSamuraiToponymyActivity"
+android:name = "com.amaze.filemanager.activities.SelfridgeBeautyActivity"
 android:exported="false"
-android:launchMode="singleTop"
+android:windowSoftInputMode="adjustResize"
 />
 
     </application>

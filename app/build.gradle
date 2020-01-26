@@ -28,7 +28,7 @@ android {
         applicationId "file.manager.app.file.explorer.files.earn.cash"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 66
+        versionCode 67
         versionName "3.3.0RC1"
         multiDexEnabled true
 
@@ -78,6 +78,7 @@ android {
         fdroid {
             dimension 'static'
             buildConfigField "boolean", "IS_VERSION_FDROID", "true"
+            signingConfig signingConfigs.releaseConfig
         }
 
         play {
