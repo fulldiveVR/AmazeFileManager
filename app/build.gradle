@@ -219,7 +219,7 @@ dependencies {
     implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.50") {
         exclude group: "org.jetbrains", module: "annotations"
     }
-    implementation project(":libstorage")
+    releaseImplementation project(":libstorage")
 }
 
 configurations.all {

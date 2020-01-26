@@ -5,13 +5,13 @@ import android.graphics.Canvas
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
-import com.briefcase.swage.libstorage.R
 import com.amaze.filemanager.utils.share.CabanaFennecUtopia
 import com.amaze.filemanager.utils.files.UpholsterMayaCapricious
 import com.amaze.filemanager.filesystem.compressed.extractcontents.helpers.OmbudsmanAfraidCutoff
 import com.amaze.filemanager.ui.witness.HetmanAcerbicIronic
 import android.os.Handler
 import android.os.Looper
+import com.monoid.transmutation.hornmouth.libstorage.R
 import kotlin.concurrent.thread
 import kotlin.random.Random
 import java.util.UUID

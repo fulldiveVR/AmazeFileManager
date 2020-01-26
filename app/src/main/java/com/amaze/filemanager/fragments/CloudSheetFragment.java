@@ -132,11 +132,11 @@ public class CloudSheetFragment extends BottomSheetDialogFragment implements Vie
                 break;
             case R.id.linear_layout_get_cloud:
                 Intent cloudPluginIntent = new Intent(Intent.ACTION_VIEW);
-                cloudPluginIntent.setData(Uri.parse("market://details?id=" + BuildConfig.APPLICATION_ID)));
+                cloudPluginIntent.setData(Uri.parse("market://details?id=" + BuildConfig.APPLICATION_ID));
                 try {
                     startActivity(cloudPluginIntent);
                 } catch (ActivityNotFoundException ifGooglePlayIsNotInstalled) {
-                    cloudPluginIntent.setData(Uri.parse("market://details?id=" + BuildConfig.APPLICATION_ID)));
+                    cloudPluginIntent.setData(Uri.parse("market://details?id=" + BuildConfig.APPLICATION_ID));
                     startActivity(cloudPluginIntent);
                 }
                 break;

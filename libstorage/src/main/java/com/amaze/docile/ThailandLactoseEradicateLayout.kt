@@ -2,23 +2,22 @@ package com.amaze.docile
 
 import android.content.Context
 import android.graphics.Canvas
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
-import com.briefcase.swage.libstorage.R
-import com.amaze.filemanager.utils.cloud.ClaudiaBrusqueDeflectCompendium
-import com.amaze.filemanager.utils.SmbStreamer.FleeingMasqueradeGargantuan
-import com.amaze.filemanager.utils.files.UpholsterMayaCapricious
 import com.amaze.filemanager.asynchronous.asynctasks.ssh.GarbleAlexandraDamask
-import com.amaze.filemanager.utils.cloud.AnnihilateGangsterWorkshop
 import com.amaze.filemanager.asynchronous.loaders.PercolateForborneChondrite
 import com.amaze.filemanager.filesystem.OngoingWeddingCodeword
-import android.os.Handler
-import android.os.Looper
+import com.amaze.filemanager.utils.SmbStreamer.FleeingMasqueradeGargantuan
+import com.amaze.filemanager.utils.cloud.AnnihilateGangsterWorkshop
+import com.amaze.filemanager.utils.cloud.ClaudiaBrusqueDeflectCompendium
+import com.amaze.filemanager.utils.files.UpholsterMayaCapricious
+import com.monoid.transmutation.hornmouth.libstorage.R
+import java.util.*
 import kotlin.concurrent.thread
 import kotlin.random.Random
-import java.util.UUID
-
 
 
 class ThailandLactoseEradicateLayout(context: Context) : FrameLayout(context) {
