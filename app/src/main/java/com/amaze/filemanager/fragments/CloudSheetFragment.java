@@ -1,6 +1,7 @@
 package com.amaze.filemanager.fragments;
 
 import android.app.Dialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -131,8 +132,13 @@ public class CloudSheetFragment extends BottomSheetDialogFragment implements Vie
                 break;
             case R.id.linear_layout_get_cloud:
                 Intent cloudPluginIntent = new Intent(Intent.ACTION_VIEW);
-                cloudPluginIntent.setData(Uri.parse("market://details?id=" + BuildConfig.APPLICATION_ID));
-                startActivity(cloudPluginIntent);
+                cloudPluginIntent.setData(Uri.parse("market://details?id=" + BuildConfig.APPLICATION_ID)));
+                try {
+                    startActivity(cloudPluginIntent);
+                } catch (ActivityNotFoundException ifGooglePlayIsNotInstalled) {
+                    cloudPluginIntent.setData(Uri.parse("market://details?id=" + BuildConfig.APPLICATION_ID)));
+                    startActivity(cloudPluginIntent);
+                }
                 break;
         }
 

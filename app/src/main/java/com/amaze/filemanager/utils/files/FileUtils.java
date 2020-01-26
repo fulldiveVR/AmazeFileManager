@@ -1,6 +1,7 @@
 /*
- * Copyright (C) 2014 Arpit Khurana <arpitkh96@gmail.com>, Vishal Nehra <vishalmeham2@gmail.com>,
- * Marcin Zasuwa <marcinadd@gmail.com>
+ * Copyright (C) 2014-2020 Arpit Khurana <arpitkh96@gmail.com>,
+ * Vishal Nehra <vishalmeham2@gmail.com>, Marcin Zasuwa <marcinadd@gmail.com>,
+ * Raymond Lai <airwave209gt at gmail.com> and contributors.
  *
  * This file is part of Amaze File Manager.
  *
@@ -23,7 +24,6 @@ package com.amaze.filemanager.utils.files;
 import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
-import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.ContentResolver;
@@ -41,14 +41,13 @@ import android.os.CountDownTimer;
 import android.preference.PreferenceManager;
 import android.provider.BaseColumns;
 import android.provider.MediaStore;
-import androidx.annotation.NonNull;
-import androidx.core.content.FileProvider;
-import androidx.documentfile.provider.DocumentFile;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
+import androidx.annotation.NonNull;
+import androidx.core.content.FileProvider;
+import androidx.documentfile.provider.DocumentFile;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.amaze.filemanager.R;
 import com.amaze.filemanager.activities.DatabaseViewerActivity;
@@ -59,8 +58,8 @@ import com.amaze.filemanager.filesystem.HybridFile;
 import com.amaze.filemanager.filesystem.HybridFileParcelable;
 import com.amaze.filemanager.filesystem.Operations;
 import com.amaze.filemanager.filesystem.RootHelper;
-import com.amaze.filemanager.fragments.preference_fragments.PreferencesConstants;
 import com.amaze.filemanager.filesystem.compressed.CompressedHelper;
+import com.amaze.filemanager.fragments.preference_fragments.PreferencesConstants;
 import com.amaze.filemanager.ui.dialogs.GeneralDialogCreation;
 import com.amaze.filemanager.ui.icons.Icons;
 import com.amaze.filemanager.ui.icons.MimeTypes;
@@ -76,7 +75,7 @@ import com.cloudrail.si.interfaces.CloudStorage;
 import com.cloudrail.si.types.CloudMetaData;
 import com.googlecode.concurrenttrees.radix.ConcurrentRadixTree;
 import com.googlecode.concurrenttrees.radix.node.concrete.voidvalue.VoidValue;
-
+import jcifs.smb.SmbFile;
 import net.schmizz.sshj.sftp.RemoteResourceInfo;
 import net.schmizz.sshj.sftp.SFTPClient;
 import net.schmizz.sshj.sftp.SFTPException;
@@ -90,15 +89,12 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.concurrent.atomic.AtomicLong;
 
-import jcifs.smb.SmbFile;
-
-import static androidx.core.content.FileProvider.getUriForFile;
-
 /**
  * Functions that deal with files
  */
 public class FileUtils {
 
+    public static final String FILE_PROVIDER_AUTHORITY = "com.amaze.filemanager";
     public static final String NOMEDIA_FILE = ".nomedia";
 
     public static long folderSize(File directory, OnProgressUpdate<Long> updateState) {
@@ -306,31 +302,6 @@ public class FileUtils {
         // participate in layout passes, etc.)
     }
 
-    public static void revealShow(final View view, boolean reveal) {
-        if (reveal) {
-            ObjectAnimator animator = ObjectAnimator.ofFloat(view, View.ALPHA, 0f, 1f);
-            animator.setDuration(300); //ms
-            animator.addListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationStart(Animator animation) {
-                    view.setVisibility(View.VISIBLE);
-                }
-            });
-            animator.start();
-        } else {
-
-            ObjectAnimator animator = ObjectAnimator.ofFloat(view, View.ALPHA, 1f, 0f);
-            animator.setDuration(300); //ms
-            animator.addListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    view.setVisibility(View.GONE);
-                }
-            });
-            animator.start();
-        }
-    }
-
     public static void crossfadeInverse(final View buttons,final View pathbar) {
         // Set the content view to 0% opacity but visible, so that it is visible
         // (but fully transparent) during the animation.
@@ -384,7 +355,7 @@ public class FileUtils {
         ArrayList<Uri> uris = new ArrayList<>();
         boolean b = true;
         for (File f : a) {
-            uris.add(Uri.fromFile(f));
+            uris.add(FileProvider.getUriForFile(c, FILE_PROVIDER_AUTHORITY, f));
         }
 
         String mime = MimeTypes.getMimeType(a.get(0).getPath(), a.get(0).isDirectory());
@@ -420,15 +391,23 @@ public class FileUtils {
             permissionsActivity.requestInstallApkPermission(() -> installApk(f, permissionsActivity));
         }
 
-        Intent chooserIntent = new Intent();
-        chooserIntent.setAction(Intent.ACTION_INSTALL_PACKAGE);
-        chooserIntent.setData(Uri.fromFile(f));
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        String type = "application/vnd.android.package-archive";
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            Uri downloadedApk = FileProvider.getUriForFile(permissionsActivity.getApplicationContext(), "com.amaze.filemanager", f);
+            intent.setDataAndType(downloadedApk, type);
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        } else {
+            intent.setDataAndType(Uri.fromFile(f), type);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
 
         try {
-            permissionsActivity.startActivity(chooserIntent);
-        } catch (ActivityNotFoundException e) {
+            permissionsActivity.startActivity(intent);
+        } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(permissionsActivity, R.string.error, Toast.LENGTH_SHORT).show();
+            Toast.makeText(permissionsActivity, R.string.failed_install_apk, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -550,7 +529,7 @@ public class FileUtils {
         }
 
         chooserIntent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        return FileProvider.getUriForFile(context, "com.amaze.filemanager", file);
+        return FileProvider.getUriForFile(context, FILE_PROVIDER_AUTHORITY, file);
     }
 
     private static Uri fileToContentUri(Context context, String path, boolean isDirectory, String volume) {

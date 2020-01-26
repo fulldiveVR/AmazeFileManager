@@ -23,6 +23,8 @@ package com.amaze.filemanager.filesystem.ssh;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import android.os.AsyncTask;
 import android.util.Log;
 
 import com.amaze.filemanager.activities.MainActivity;
@@ -77,6 +79,20 @@ public class SshConnectionPool
             instance = new SshConnectionPool();
 
         return instance;
+    }
+
+    /**
+     * Remove a SSH connection from connection pool. Disconnects from server before removing.
+     *
+     * For updating SSH connection settings.
+     *
+     * This method will silently end without feedback if the specified SSH connection URI does not
+     * exist in the connection pool.
+     *
+     * @param url SSH connection URI
+     */
+    public void removeConnection(@NonNull String url, @NonNull Runnable callback) {
+        new AsyncRemoveConnection(url, callback).execute();
     }
 
     /**
@@ -258,6 +274,33 @@ public class SshConnectionPool
                 port = SSH_DEFAULT_PORT;
 
             this.port = port;
+        }
+    }
+
+    private final class AsyncRemoveConnection extends AsyncTask<Void, Void, Void> {
+
+        private String url;
+        private Runnable callback;
+
+        AsyncRemoveConnection(@NonNull String url, @Nullable Runnable callback) {
+            this.url = url;
+            this.callback = callback;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            url = SshClientUtils.extractBaseUriFrom(url);
+
+            if(connections.containsKey(url)) {
+                SshClientUtils.tryDisconnect(connections.remove(url));
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            if(callback != null)
+                callback.run();
         }
     }
 }
