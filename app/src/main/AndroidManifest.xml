@@ -129,7 +129,7 @@
             android:theme="@style/appCompatLight">
             <intent-filter
                 tools:ignore="AppLinkUrlError"
-                android:label="Amaze Text Editor">
+                android:label="CryptoFile Text Editor">
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="text/*" />
@@ -146,7 +146,7 @@
             android:screenOrientation="locked">
             <intent-filter
                 tools:ignore="AppLinkUrlError"
-                android:label="Amaze Database Reader">
+                android:label="CryptoFile Database Reader">
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="db/*" />

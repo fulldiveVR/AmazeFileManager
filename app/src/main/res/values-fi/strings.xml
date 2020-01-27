@@ -19,7 +19,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     -->
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-  <string name="app_name">Amaze</string>
+  <string name="app_name">CryptoFile</string>
   <string name="drawer_open">Avaa navigointivalikko</string>
   <string name="drawer_close">Sulje navigointivalikko</string>
     <string name="icon">Ikoni</string>
