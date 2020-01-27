@@ -351,7 +351,7 @@ public class MainActivity extends PermissionsActivity implements SmbConnectionLi
 
         //recents header color implementation
         if (SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            ActivityManager.TaskDescription taskDescription = new ActivityManager.TaskDescription("Amaze",
+            ActivityManager.TaskDescription taskDescription = new ActivityManager.TaskDescription("CryptoFile",
                     ((BitmapDrawable) getResources().getDrawable(R.mipmap.ic_launcher)).getBitmap(),
                     ColorPreferenceHelper.getPrimary(getCurrentColorPreference(), MainActivity.currentTab));
             setTaskDescription(taskDescription);

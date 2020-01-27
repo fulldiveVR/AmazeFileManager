@@ -142,7 +142,7 @@ public class TextEditorActivity extends ThemedActivity implements TextWatcher, V
         toolbar.setBackgroundColor(primaryColor);
         searchViewLayout.setBackgroundColor(primaryColor);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            ActivityManager.TaskDescription taskDescription = new ActivityManager.TaskDescription("Amaze",
+            ActivityManager.TaskDescription taskDescription = new ActivityManager.TaskDescription("CryptoFile",
                     ((BitmapDrawable) getResources().getDrawable(R.mipmap.ic_launcher)).getBitmap(),
                     primaryColor);
             setTaskDescription(taskDescription);

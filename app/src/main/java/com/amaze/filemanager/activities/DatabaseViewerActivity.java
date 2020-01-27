@@ -96,7 +96,7 @@ public class DatabaseViewerActivity extends ThemedActivity {
 
         if (SDK_INT >= 21) {
             ActivityManager.TaskDescription taskDescription = new ActivityManager.TaskDescription
-                    ("Amaze",
+                    ("CryptoFile",
                             ((BitmapDrawable) ContextCompat.getDrawable(this, R.mipmap.ic_launcher)).getBitmap(),
                             primaryColor);
             setTaskDescription(taskDescription);
